@@ -62,10 +62,17 @@ a .fa-angle-down {
 
 a .fa-angle-down:hover {
 	color: rgba(100, 100, 100, 1);
-	text-shadow: 0.5px 1px 0.1px #ff1744;
-	-webkit-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	transform: scale(1.1);
+	-webkit-transform: scale(1.01);
+	-ms-transform: scale(1.01);
+	transform: scale(1.01);
+}
+
+.fa-angle-double-left {
+	padding: 0.5em 0.5em 0.5em 0;
+}
+
+.fa-angle-double-right {
+	padding: 0.5em 0 0.5em 0.5em;
 }
 
 /* === NAV === */
@@ -137,10 +144,11 @@ ul.navbar-nav {
 
 /* ===== SECTION ===== */
 /* === HOME === */
-.container-fluid.home-bg {
-	background: url("https://dl.dropboxusercontent.com/s/im37e1tdbbfasy2/home_bg.png?dl=0") top left / cover no-repeat, url("https://dl.dropboxusercontent.com/s/nwvg9vdlocra1d5/screens03_opacity.png?dl=0") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -webkit-linear-gradient(50deg, #1f1f1f, #393939);
-	background: url("https://dl.dropboxusercontent.com/s/im37e1tdbbfasy2/home_bg.png?dl=0") top left / cover no-repeat, url("https://dl.dropboxusercontent.com/s/nwvg9vdlocra1d5/screens03_opacity.png?dl=0") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -o-linear-gradient(50deg, #1f1f1f, #393939);
-	background: url("https://dl.dropboxusercontent.com/s/im37e1tdbbfasy2/home_bg.png?dl=0") top left / cover no-repeat, url("https://dl.dropboxusercontent.com/s/nwvg9vdlocra1d5/screens03_opacity.png?dl=0") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, linear-gradient(40deg, #1f1f1f, #393939);
+.container-fluid.home-bg,
+.container-fluid.home-art-bg {
+	background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -webkit-linear-gradient(50deg, #1f1f1f, #393939);
+	background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -o-linear-gradient(50deg, #1f1f1f, #393939);
+	background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, linear-gradient(40deg, #1f1f1f, #393939);
 	margin-top: -5em;
 }
 
@@ -170,6 +178,14 @@ section.bg {
 	background: url("../images/dark_wall.png") top left repeat;
 	-webkit-box-shadow: inset 0 0 1em 0.5em rgba(17, 17, 17, 0.4);
 	box-shadow: inset 0 0 1em 0.5em rgba(17, 17, 17, 0.4);
+}
+
+.thumbnail-full-1 p {
+	padding: 0;
+}
+
+.thumbnail-full p {
+	padding-bottom: 3.8em;
 }
 
 .thumbnail {
@@ -262,7 +278,7 @@ section.bg {
 
 /* === CONTACT === */
 .container-fluid.contact-bg {
-	background: url("https://dl.dropboxusercontent.com/s/37vxe6g7ucj4o4v/contact-img._med.png?dl=0") top left / cover no-repeat;
+	background: url("../images/contact-img._med.png") top left / cover no-repeat;
 }
 
 .contact-bg .row {
@@ -394,10 +410,20 @@ textarea::placeholder {
 }
 
 /* === BLOG === */
-#blog-header h1{
+#blog-header {
+	margin: 0;
+	margin-bottom: 5em;
+	padding: 0;
+}
+
+#blog-art-header h1{
 	margin: 0;
 	margin-top: -2em;
 	padding: 0;
+}
+
+#blog-header h1 {
+	margin-top: -1.5em;	
 }
 
 .container-fluid.blog-bg {
@@ -449,10 +475,12 @@ textarea::placeholder {
 }
 
 .blog-thumbnail-area img {
+	min-width: 100%;
+	min-height: 100%;
 	float: right;
-	-webkit-transform: translateY(-12em);
-	-ms-transform: translateY(-12em);
-	transform: translateY(-12em);
+	-webkit-transform: translateY(-8em) scale(1.3);
+	-ms-transform: translateY(-8em) scale(1.3);
+	transform: translateY(-8em) scale(1.3);
 }
 
 .blog-thumbnail span {
@@ -492,9 +520,22 @@ div :nth-of-type(3).blog-thumbnail {
 }
 
 /* === ARTICLE === */
+
+
 article header {
 	margin-top: 1em;
 	text-align: center;
+}
+
+article header h5 a {
+	color: #EEEEEE;
+	font-weight: 300;
+}
+
+article header h5 a:hover {
+	color: #EEEEEE;
+	font-weight: 300;
+	border-bottom: 1px dotted #F5F5F5;
 }
 
 .article-nav {
@@ -519,7 +560,7 @@ article header {
 .post-img {
 	width: 100%;
 	height: 30em;
-	background: url("../images/brennan-burling-358579_1980x1320_60.jpg") 0 -18em / cover no-repeat;
+	background: url("../images/brennan-burling-358579_1980x1320_60.jpg") 0 -7em / cover no-repeat;
 }
 
 .post-img a {
@@ -547,21 +588,22 @@ article a {
 	font-weight: 600;
 }
 
-article a:hover {
-	color: #1f1f1f;
+article a:hover,
+article a:focus {
+	color: #4D4B4B;
 	text-decoration: none;
-	border-bottom: 1.5px solid #FF1744;
 }
 
-.tags p {
+.tags p {	
 	padding: 0;
-	font-size: 1em;
+	font-size: 0.85em;
 	font-weight: 300;
 	color: #FF1744;
 }
 
 .tags a {
-	margin: 0 0.3em;
+	display: inline-block;
+	margin: 0.3em 0.3em;
 	padding: 0.1em 0.5em;
 	color: #FF1744;
 	font-weight: 300;
@@ -573,12 +615,46 @@ article a:hover {
 	border: 1px dotted transparent;
 }
 
+/*.links:after {
+	content: "";
+	display: table;
+	clear: both;
+}*/
+
+.previous {
+	float: left;
+}
+
+.next {
+	float: right;
+}
+
+span.previous,
+span.next {
+	margin: 2em 0;
+}
+
+.previous a,
+.next a {
+	color: #dfdcdc;
+	text-transform: uppercase;
+	padding: 0 0.5em;
+}
+
+.previous a:hover,
+.next a:hover {
+	color: #FF1744;
+	text-transform: uppercase;
+	padding: 0 0.5em;
+	padding-bottom: 0.8em; 
+}
+
 /*=== COMMENTS===*/
 .comments {
 	margin-bottom: 2em;
 }
 .comments h3 {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: 300;
 	text-align: left;
 	text-shadow: 0px 0px 0px transparent;
@@ -586,6 +662,10 @@ article a:hover {
 
 .comment-box .fa-circle {
 	font-size: 0.3em;
+}
+
+.comment-box h4 {
+	font-size: 1.2em;
 }
 
 .comment-box h4,
@@ -607,7 +687,7 @@ article a:hover {
 
 .comment-box p {
 	padding-top: 0.6em;
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 .comment-box {
@@ -638,6 +718,10 @@ article a:hover {
 .comment-form h5 {
 	text-align: center;
 	padding: 0.2em;
+}
+
+.comment-form h2 {
+	font-size: 1.6em;
 }
 
 .comment-form h5 {
@@ -698,51 +782,29 @@ h6 {
 
 
 /* >>>====== MEDIA QUERIES ======<<< */
-/*@media only screen and (max-width: 991px) {
-	section.bg {
-		height: 40em;
-	}
+@media only screen and (max-width: 991px) {
 	.container-fluid section.bg .row .main-text{
-		margin-top: 10%;
-		padding-left: 0;
+		margin: 28% 0 0;
 	}
-	.portfolio-bg .thumbnail {
-		margin: 1em 0 1em;
+	.post-img {
+		width: 100%;
+		max-height: 40em;
+		background: url("../images/brennan-burling-358579_1980x1320_60.jpg") center / cover no-repeat;
 	}
-	.portfolio-bg .row:first-child {
-		padding: 1.5em 0 4.5em;
-	}
-	.contact-bg .row:first-child {
-		padding: 2.5em 0 5em;
-	}
-	footer .row.items {
-		display: -webkit-box;
-  	display: -ms-flexbox;  
-  	display: -webkit-flex;
-		display: flex;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-		flex-flow: row nowrap;
-		-ms-flex-pack: distribute;
-		justify-content: space-around;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
+	#blog-header {
 		margin: 0;
+		margin-bottom: 4em;
 		padding: 0;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
 	}
-	.footer-text {
-		padding-left: 2.2em;
+	#blog-header h1 {
+		margin-top: -3em;
 	}
-	h6 {
-		color: #dfdcdc;
-		font-family: 'Oxygen', sans-serif;
-		font-weight: 400;	
+	.blog-thumbnail-area img {
+		-webkit-transform: translateY(-5em) scale(1.5);
+		-ms-transform: translateY(-5em) scale(1.5);
+		transform: translateY(-5em) scale(1.5);
 	}
-}*/
+}
 
 @media only screen and (max-width: 767px) {
 	.navbar-inverse .collapse.navbar-collapse {
@@ -761,20 +823,16 @@ h6 {
 		margin-top: 10px;
 		-webkit-box-shadow: none;
 		box-shadow: none;
-		
 	}
 	.navbar-collapse {
 		overflow-x: hidden;
 	}
-
 	.navbar-inverse .navbar-toggle:hover,
 	.navbar-inverse .navbar-toggle:focus {
 	  background-color: transparent !important;
 	}
-	
 	.navbar-collapse > .navbar-nav > li:first-of-type {
-		margin: 0 -1.45em;
-		
+		margin: 0 -1.45em;	
 	}
 	.navbar-collapse > .navbar-nav > li a {
 		margin: 0 -1.45em;
@@ -784,39 +842,90 @@ h6 {
 		background-color: rgba(50, 50, 50, 0.95) !important;
 	}
 	.container-fluid.home-bg {
-		background: url("https://dl.dropboxusercontent.com/s/im37e1tdbbfasy2/home_bg.png?dl=0") top left / cover no-repeat, url("https://dl.dropboxusercontent.com/s/nwvg9vdlocra1d5/screens03_opacity.png?dl=0") 50% 90% no-repeat, -webkit-linear-gradient(50deg, #1f1f1f, #393939);
-		background: url("https://dl.dropboxusercontent.com/s/im37e1tdbbfasy2/home_bg.png?dl=0") top left / cover no-repeat, url("https://dl.dropboxusercontent.com/s/nwvg9vdlocra1d5/screens03_opacity.png?dl=0") 50% 90% no-repeat, -o-linear-gradient(50deg, #1f1f1f, #393939);
-		background: url("https://dl.dropboxusercontent.com/s/im37e1tdbbfasy2/home_bg.png?dl=0") top left / cover no-repeat, url("https://dl.dropboxusercontent.com/s/nwvg9vdlocra1d5/screens03_opacity.png?dl=0") 50% 90% no-repeat, linear-gradient(40deg, #1f1f1f, #393939);
+		background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -webkit-linear-gradient(50deg, #1f1f1f, #393939);
+		background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -o-linear-gradient(50deg, #1f1f1f, #393939);
+		background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, linear-gradient(40deg, #1f1f1f, #393939);
 		margin-top: -5em;
 	}
-	section.bg {
-		height: 36em;
+	.fa-angle-down {
+		visibility: hidden;
+	}
+	.container-fluid section.bg .row .main-text{
+		margin: 0 0 -5%;
+	}
+	#blog-header {
+		margin: 0;
+		margin-top: 8em;
+		padding: 0;
+	}
+	#blog-header h1 {
+		margin-top: -5em;		
+	}
+	#blog-art-header h1{
+		margin: 0;
+		margin-top: -0.3em;
+		padding: 0;
 	}
 	.container-fluid section.bg .row .main-text {
-		margin-top: 45%;
+		margin-top: 30%;
+		margin-bottom: -10%;
 	}
 	.portfolio-bg i {
 		font-size: 5em;
 		font-size: 18vw;
 	}
-	
 	h6 {
 		font-size: 0.7em;
 	}
-}
-
-@media only screen and (max-width : 479px) {
-	section.bg {
-		height: 34em;
+	.blog-thumbnail {
+		flex-flow: row wrap;
+		-webkit-box-flex: 0;
+		-ms-flex: 1 50%;
+		flex: 1 30%;
+		max-width: 100%;
+		height: 20em;
+		margin: 1em 0.8em;
+		position: relative;
+		border: 1px solid #312e2e;
+		border-radius: 0.1em;
+		overflow: hidden;
 	}
-	
-	h1 {
-		font-size: 2em;
+	div :nth-of-type(3).blog-thumbnail {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1 30%;
+		flex-flow: row wrap;
 	}
-	h2 {
-		font-size: 1.1em;
+	.blog-thumbnail {
+		width: 100%;
+		height: 15em;
+	}
+	.blog-thumbnail span h2 {		
+		font-size: 1.3em;
+	}
+	.blog-thumbnail span h5 {
+		font-size: 1em;
+	}
+	.article-nav {
+		height: 1px;
+	}
+	.post-img a {
+		margin-top: 32em;
+		float: right;
+	}
+	.post-img a:hover {
+		border: none;
+	}
+	.post-body p {
+		line-height: 1.5em;
+		letter-spacing: 0.1em;
+	}	
+	footer .social {
+		margin-bottom: 0em;
+		padding: 0;
 	}
 	.footer-text {
+		margin-top: -0.5em;
 		padding-left: 0em;
 	}
 	h6 {
@@ -828,21 +937,104 @@ h6 {
 		margin-top: 20px;
 	}
 }
-/*
-@media only screen and (max-width : 319px) {
-	footer .row.items {
-		padding: 0.65em 0;
+
+@media only screen and (max-width : 479px) {	
+	h1 {
+		font-size: 2em;
 	}
-	.social {
-		-ms-flex-pack: distribute;
-		justify-content: space-around;
+	h2 {
+		font-size: 1.1em;
 	}
-	.footer-text {
+	.container-fluid section.bg .row .main-text{
+		margin: 50% 0 -10%;
+	}
+	.thumbnail-full p {
+		padding-bottom: 0em;
+	}
+	.portfolio-bg .thumbnail {
+		padding-bottom: 100%;
+		margin: 3em -3em 1em;
+	}
+	#blog-header {
+		margin: 0;
+		margin-top: 1em;
 		padding: 0;
 	}
-	h6 {
-		padding:0;
-		font-size: 0.65em;
-		margin: 0.1em 0 0.1em 0;
+	#blog-header h1 {
+		margin-top: -4em;	
+	}
+	#blog-art-header h1{
+		margin: 0;
+		margin-top: -0.4em;
+		padding: 0;
+	}
+	.blog-thumbnail {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 100%;
+		flex: 1 100%;
+		max-width: 100%;
+		height: 20em;
+		margin: 1em 0.8em;
+		position: relative;
+		border: 1px solid #312e2e;
+		border-radius: 0.1em;
+		overflow: hidden;
+	}
+	div :nth-of-type(3).blog-thumbnail {
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		flex-flow: row wrap;
+	}
+	.blog-thumbnail {
+		width: 100%;
+		height: 18em;
+	}
+	.blog-thumbnail-area img {
+		-webkit-transform: translateY(-4em) scale(1.5);
+		-ms-transform: translateY(-4em) scale(1.5);
+		transform: translateY(-4em) scale(1.5);
+	}
+	article header h2 {
+		display: inline;
+	}
+}
+
+@media only screen and (max-width : 319px) {
+	.container-fluid section.bg .row .main-text{
+		margin: 40% 0 -30%;
+	}
+	.thumbnail-full-1 p,
+	.thumbnail-full p {
+		font-size: 1.1em !important;
+		line-height: 1.2em;
+	}
+	.portfolio-bg .thumbnail {
+		padding-bottom: 130%;
+	}
+	#blog-header {
+		margin: 0;
+		margin-top: 8em;
+		padding: 0;
+	}
+	#blog-header h1 {
+		margin-top: -5em;	
+	}
+	.blog-thumbnail {
+		width: 100%;
+		height: 15em;
+	}
+	.post-img {
+		width: 100%;
+		height: 20em;
+		background: url("../images/brennan-burling-358579_1980x1320_60.jpg") -6em 0 / cover no-repeat;
+	}
+	.post-body p {
+		letter-spacing: 0.02em;
+		font-size: 1.2em;
+		line-height: 1.4em;
+	}	
+	.post-img a {
+		margin-top: 20em;
 	}
 }
