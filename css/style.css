@@ -782,9 +782,14 @@ h6 {
 
 
 /* >>>====== MEDIA QUERIES ======<<< */
+@media only screen and (max-width: 1024px) {
+	.container-fluid section.bg .row .main-text {
+		margin-top: 25%;
+	}
+}
 @media only screen and (max-width: 991px) {
 	.container-fluid section.bg .row .main-text{
-		margin: 28% 0 0;
+		margin: 30% 0 0;
 	}
 	.post-img {
 		width: 100%;
@@ -961,7 +966,7 @@ h6 {
 		padding: 0;
 	}
 	#blog-header h1 {
-		margin-top: -4em;	
+		margin-top: -3.9em;	
 	}
 	#blog-art-header h1{
 		margin: 0;
@@ -997,6 +1002,7 @@ h6 {
 	}
 	article header h2 {
 		display: inline;
+		border-bottom: 1.4px dotted #FF1744;
 	}
 }
 
