@@ -11,6 +11,9 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 	color: #EEEEEE;
 }
 
@@ -108,7 +111,7 @@ ul.navbar-nav {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-	color: #dfdcdc !important;
+	color: #e6e6e6 !important;
 	background: transparent !important;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.1em;
@@ -120,7 +123,7 @@ ul.navbar-nav {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:active {
-	color: #dfdcdc !important;
+	color: #e6e6e6 !important;
 	text-shadow: 1.2px 1px 0px #ff1744;
 	/*border-bottom: 2.5px solid #ff1744;
 	padding-bottom: 0.8em;*/
@@ -146,9 +149,9 @@ ul.navbar-nav {
 /* === HOME === */
 .container-fluid.home-bg,
 .container-fluid.home-art-bg {
-	background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -webkit-linear-gradient(50deg, #1f1f1f, #393939);
-	background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -o-linear-gradient(50deg, #1f1f1f, #393939);
-	background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, linear-gradient(40deg, #1f1f1f, #393939);
+	background: url("../images/home_bg_lg.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -webkit-linear-gradient(40deg, #1f1f1f, #312e2e);
+	background: url("../images/home_bg_lg.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -o-linear-gradient(40deg, #1f1f1f, #312e2e);
+	background: url("../images/home_bg_lg.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, linear-gradient(40deg, #1f1f1f, #312e2e);
 	margin-top: -5em;
 }
 
@@ -278,7 +281,8 @@ section.bg {
 
 /* === CONTACT === */
 .container-fluid.contact-bg {
-	background: url("../images/contact-img._med.png") top left / cover no-repeat;
+	background: url("../images/contact_bg_lg.png") top left / cover no-repeat;
+	background-color: #1f1f1f;
 }
 
 .contact-bg .row {
@@ -453,14 +457,20 @@ textarea::placeholder {
 .blog-thumbnail {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 30%;
-	flex: 1 30%;
+	flex: 1 21%;
 	max-width: 100%;
-	height: 20em;
-	margin: 1em 0.8em;
+	height: 16em;
+	margin: 0.8em 0.8em;
 	position: relative;
 	border: 1px solid #312e2e;
 	border-radius: 0.1em;
 	overflow: hidden;
+}
+
+div :nth-of-type(3).blog-thumbnail {
+	-webkit-box-flex: 2;
+	-ms-flex: 2 45%;
+	flex: 2 31%;
 }
 
 .blog-thumbnail:hover {
@@ -513,12 +523,6 @@ textarea::placeholder {
 	font-size: 1.2em;
 }
 
-div :nth-of-type(3).blog-thumbnail {
-	-webkit-box-flex: 2;
-	-ms-flex: 2 45%;
-	flex: 2 45%;
-}
-
 /* === ARTICLE === */
 
 
@@ -555,6 +559,8 @@ article header h5 a:hover {
 
 .post-body p {
 	letter-spacing: 0.04em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 .post-img {
@@ -847,10 +853,13 @@ h6 {
 		background-color: rgba(50, 50, 50, 0.95) !important;
 	}
 	.container-fluid.home-bg {
-		background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -webkit-linear-gradient(50deg, #1f1f1f, #393939);
-		background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -o-linear-gradient(50deg, #1f1f1f, #393939);
-		background: url("../images/home_bg_800x405_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, linear-gradient(40deg, #1f1f1f, #393939);
+		background: url("../images/home_bg_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -webkit-linear-gradient(40deg, #1f1f1f, #312e2e);
+		background: url("../images/home_bg_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, -o-linear-gradient(40deg, #1f1f1f, #312e2e);
+		background: url("../images/home_bg_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 60% / 32% no-repeat, linear-gradient(40deg, #1f1f1f, #312e2e);
 		margin-top: -5em;
+	}
+	.container-fluid.contact-bg {
+		background: url("../images/contact_bg_lg.png") top left / cover no-repeat;
 	}
 	.fa-angle-down {
 		visibility: hidden;
@@ -923,7 +932,7 @@ h6 {
 	}
 	.post-body p {
 		line-height: 1.5em;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.06em;
 	}	
 	footer .social {
 		margin-bottom: 0em;
@@ -966,7 +975,7 @@ h6 {
 		padding: 0;
 	}
 	#blog-header h1 {
-		margin-top: -3.9em;	
+		margin-top: -3.7em;	
 	}
 	#blog-art-header h1{
 		margin: 0;
