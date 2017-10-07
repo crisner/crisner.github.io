@@ -864,7 +864,7 @@ h6 {
 		background: url("../images/home_bg_med.png") top left / cover no-repeat, url("../images/screens03_opacity.png") 90% 50% / 30% no-repeat, url("../images/bg_pattern.png") 5% 50% / 45% no-repeat, linear-gradient(40deg, #1f1f1f, #312e2e);
 	}
 	.container-fluid.contact-bg {
-		background: url("../images/contact_bg_med.png.png") top right / cover no-repeat;
+		background: url("../images/contact_bg_med.png") top right / cover no-repeat;
 	}
 	.fa-angle-down {
 		visibility: hidden;
