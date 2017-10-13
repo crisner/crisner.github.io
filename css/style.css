@@ -286,7 +286,7 @@ section.bg {
 }
 
 .contact-bg .row {
-	margin-bottom: 0;
+	margin-bottom: 2em;
 	margin-top: 1em;
 }
 
@@ -868,9 +868,6 @@ h6 {
 	}
 	.fa-angle-down {
 		visibility: hidden;
-	}
-	.container-fluid section.bg .row .main-text{
-		margin: 0 0 -5%;
 	}
 	#blog-header {
 		margin: 0;
